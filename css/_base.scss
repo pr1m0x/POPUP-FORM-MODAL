@@ -1,0 +1,243 @@
+/* -- Genaral Stylings -- */
+$cta-color: #ff583b;
+$background-color: #d9e2ec;
+$salmon-dark: #cc462e;
+$grey-light: #f0f4f8;
+$grey-dark: #9fb3c8;
+$black: #000;
+$white: #fff;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+/* -- Styling -- */
+.container {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $background-color;
+  color: $black;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.75rem 0.75rem;
+  border: 0;
+  border-radius: 0.4rem;
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: $cta-color;
+  transition: background-color 0.3s ease;
+  color: $white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $salmon-dark;
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    top: -2rem;
+    right: -2rem;
+    color: $white;
+    opacity: 0;
+
+    & svg {
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+  }
+}
+
+/* Wrap */
+.wrap {
+  display: grid;
+  & .point-hand {
+    width: 6rem;
+    color: $cta-color;
+  }
+}
+
+/* Pointer */
+.point-hand {
+  margin-top: 1.5rem;
+  animation: point 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  justify-self: center;
+}
+
+/* Popup Window */
+.popup__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.4s ease;
+  visibility: hidden;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    position: relative;
+    max-width: 63rem;
+    height: 36rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.2rem 0.4rem 0.2rem rgba(0, 0, 0, 0.15);
+  }
+  &:hover .btn__close {
+    opacity: 1;
+  }
+}
+
+.open__popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Popup Window right */
+.popup__window-right {
+  display: grid;
+  align-content: center;
+  padding: 0 4rem;
+  background-color: $white;
+  border-radius: 0 0.4rem 0.4rem 0;
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: 500;
+
+    & input {
+      height: 4rem;
+      border-radius: 0.2rem;
+      margin-bottom: 1.5rem;
+      padding: 0 1rem;
+      background-color: $grey-light;
+      border-color: $grey-dark;
+    }
+
+    & input:focus {
+      background-color: $white;
+    }
+
+    & label span svg {
+      display: inline-block;
+      vertical-align: baseline;
+      width: 1.8rem;
+    }
+
+    & label {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+/* Pop Window left */
+.popup__window-left {
+  display: flex;
+  justify-content: center;
+  background-color: $black;
+  border-radius: 0.4rem 0 0 0.4rem;
+
+  & .wave-hand {
+    width: 11rem;
+    color: $cta-color;
+  }
+}
+
+/* Signature */
+.signature {
+  font-family: monospace;
+  align-self: center;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
+  opacity: 0.5;
+  z-index: -1;
+
+  & a {
+    color: inherit;
+  }
+}
+
+/* -- Animations -- */
+/* Pointing hand animation */
+@keyframes point {
+  0% {
+    transform: translateY(7rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Shaking hand animation */
+@keyframes shake {
+  10% {
+    opacity: 40%;
+    transform: scale(0.7);
+  }
+  20% {
+    opacity: 100%;
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(1);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  55% {
+    transform: rotate(5deg);
+  }
+  70% {
+    transform: rotate(-5deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Starts the shake hand animation */
+.play {
+  animation: shake 2s ease;
+  transform-origin: bottom;
+}

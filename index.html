@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+    rel="stylesheet"
+  >
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>POPUP WINDOW</title>
+  </head>
+  <body class="container">
+    <main>
+      <div class="wrap">
+        <button class="btn btn__popup">Open Popup</button>
+        <svg class="point-hand" viewBox="0 0 58 66">
+          <use xlink:href="imgs/sprite.svg#point-hand">
+        </svg>
+      </div>
+    </main>
+    <div class="popup__overlay">
+      <div class="popup__window">
+        <div class="popup__content">
+        <div class="popup__window-left">  
+          <svg
+          class="wave-hand"
+          viewBox="0 0 112 139"
+        >
+          <use xlink:href="imgs/sprite.svg#wave-hand">
+        </svg>
+        </div>
+        <div class="popup__window-right">
+          <form action="#">
+            <label for="email"> <span>
+              <svg width="1em" height="1em" viewBox="0 0 20 20">
+                <path
+                  d="M18 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z"
+              >
+              </svg>
+            </span>Email</label>
+            <input type="text" name="email" placeholder="pr1m0x">
+            <label for="password"> 
+              <span><svg viewBox="0 0 20 20">
+              <path
+                d="M12.26 11.74L10 14H8v2H6v2l-2 2H0v-4l8.26-8.26a6 6 0 1 1 4 4zm4.86-4.62A3 3 0 0 0 15 2a3 3 0 0 0-2.12.88l4.24 4.24z"
+            >
+            </svg></span> Password</label>
+            <input type="text"  name="password" placeholder="••••••••">
+            <button type="submit" class="btn">Login</button>
+          </form>
+          <div class="btn btn__close"> 
+            <svg viewBox="0 0 18 18">
+            <use xlink:href="imgs/sprite.svg#close">
+          </svg></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="signature">Made with 	&#x1F5A4; by  <a href="https://github.com/pr1m0x" target="_">pr1m0x</a></div>
+  </body>
+  <script src="app.js"></script>
+</html>
