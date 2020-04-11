@@ -4,16 +4,19 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  line-height: 1.4; }
+  line-height: 1.4;
+}
 
 /* -- Styling -- */
 .container {
@@ -23,11 +26,12 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #d9e2ec;
-  color: #000; }
+  color: #000;
+}
 
 /* Buttons */
 .btn {
-  padding: 0.75rem 0.75rem;
+  padding: 1.25rem 1rem;
   border: 0;
   border-radius: 0.4rem;
   font-size: 2rem;
@@ -35,37 +39,44 @@ body {
   background-color: #ff583b;
   transition: background-color 0.3s ease;
   color: #fff;
-  cursor: pointer; }
-  .btn:hover {
-    background-color: #cc462e; }
-  .btn__close {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 100%;
-    top: -2rem;
-    right: -2rem;
-    color: #fff;
-    opacity: 0; }
-    .btn__close svg {
-      width: 1.3rem;
-      height: 1.3rem; }
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #cc462e;
+}
+.btn__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  top: -2rem;
+  right: -2rem;
+  color: #fff;
+  opacity: 0;
+}
+.btn__close svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
 
 /* Wrap */
 .wrap {
-  display: grid; }
-  .wrap .point-hand {
-    width: 6rem;
-    color: #ff583b; }
+  display: grid;
+}
+.wrap .point-hand {
+  width: 6rem;
+  color: #ff583b;
+}
 
 /* Pointer */
 .point-hand {
   margin-top: 1.5rem;
   animation: point 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-  justify-self: center; }
+  justify-self: center;
+}
 
 /* -- Popup Window -- */
 /* Popup Overlay */
@@ -82,12 +93,14 @@ body {
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.4s ease;
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 /* Add class to show the overlay  */
 .open__popup {
   visibility: visible;
-  opacity: 1; }
+  opacity: 1;
+}
 
 /* Popup Window Content */
 .popup__content {
@@ -97,9 +110,11 @@ body {
   max-width: 63rem;
   height: 36rem;
   border-radius: 0.4rem;
-  box-shadow: 0 0.2rem 0.4rem 0.2rem rgba(0, 0, 0, 0.15); }
-  .popup__content:hover .btn__close {
-    opacity: 1; }
+  box-shadow: 0 0.2rem 0.4rem 0.2rem rgba(0, 0, 0, 0.15);
+}
+.popup__content:hover .btn__close {
+  opacity: 1;
+}
 
 /* Popup Window right */
 .popup__window-right {
@@ -107,37 +122,45 @@ body {
   align-content: center;
   padding: 0 4rem;
   background-color: #fff;
-  border-radius: 0 0.4rem 0.4rem 0; }
-  .popup__window-right form {
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-    font-weight: 500; }
-    .popup__window-right form input {
-      height: 4rem;
-      border-radius: 0.2rem;
-      margin-bottom: 1.5rem;
-      padding: 0 1rem;
-      background-color: #f0f4f8;
-      border-color: #9fb3c8; }
-    .popup__window-right form input:focus {
-      background-color: #fff; }
-    .popup__window-right form label span svg {
-      display: inline-block;
-      vertical-align: baseline;
-      width: 1.8rem; }
-    .popup__window-right form label {
-      margin-bottom: 0.5rem; }
+  border-radius: 0 0.4rem 0.4rem 0;
+}
+.popup__window-right form {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.popup__window-right form input {
+  height: 4rem;
+  border-radius: 0.2rem;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+  background-color: #f0f4f8;
+  border-color: #9fb3c8;
+}
+.popup__window-right form input:focus {
+  background-color: #fff;
+}
+.popup__window-right form label span svg {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 1.8rem;
+}
+.popup__window-right form label {
+  margin-bottom: 0.5rem;
+}
 
 /* Pop Window left */
 .popup__window-left {
   display: flex;
   justify-content: center;
   background-color: #000;
-  border-radius: 0.4rem 0 0 0.4rem; }
-  .popup__window-left .wave-hand {
-    width: 11rem;
-    color: #ff583b; }
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+.popup__window-left .wave-hand {
+  width: 11rem;
+  color: #ff583b;
+}
 
 /* Signature */
 .signature {
@@ -149,43 +172,58 @@ body {
   transform: translateX(-50%);
   font-size: 1.3rem;
   opacity: 0.5;
-  z-index: -1; }
+  z-index: -1;
+}
 
 .signature a {
-  color: inherit; }
+  color: inherit;
+}
 
 /* -- Animations -- */
 /* Pointing hand animation */
 @keyframes point {
   0% {
     transform: translateY(7rem);
-    opacity: 0; }
+    opacity: 0;
+  }
   100% {
     transform: translateY(0);
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 
 /* Shaking hand animation */
 @keyframes shake {
   10% {
     opacity: 40%;
-    transform: scale(0.7); }
+    transform: scale(0.7);
+  }
   20% {
     opacity: 100%;
-    transform: scale(1.2); }
+    transform: scale(1.2);
+  }
   30% {
-    transform: scale(1); }
+    transform: scale(1);
+  }
   40% {
-    transform: rotate(-5deg); }
+    transform: rotate(-5deg);
+  }
   55% {
-    transform: rotate(5deg); }
+    transform: rotate(5deg);
+  }
   70% {
-    transform: rotate(-5deg); }
+    transform: rotate(-5deg);
+  }
   85% {
-    transform: rotate(5deg); }
+    transform: rotate(5deg);
+  }
   100% {
-    transform: rotate(0deg); } }
+    transform: rotate(0deg);
+  }
+}
 
 /* Starts the shake hand animation */
 .play {
   animation: shake 2s ease;
-  transform-origin: bottom; }
+  transform-origin: bottom;
+}
