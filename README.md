@@ -1,5 +1,5 @@
 # POPUP-FORM-MODAL
-https://pr1m0x.github.io/POPUP-WINDOW/
+https://pr1m0x.github.io/POPUP-FORM-MODAL/
 
 👉 Building a POPUP-FORM-MODAL game by using HTML, CSS and JS.
 
